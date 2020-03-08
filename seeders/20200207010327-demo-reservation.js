@@ -2,7 +2,7 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.bulkInsert('Form', [
+    return queryInterface.bulkInsert('Forms', [
       {
         title: 'Inclusion Winter 2020',
         question1: "Why do you want to be in Inclusion?",
@@ -13,6 +13,6 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.bulkDelete('Form', null, {});
+    return queryInterface.bulkDelete('Forms', null, {});
   }
 };
