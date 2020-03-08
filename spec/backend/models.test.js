@@ -1,7 +1,7 @@
-const { Reservation } = require('../../models');
+const { Form } = require('../../models');
 
 
-test("Reservation.all() should return an array", async () =>{
-  const result = await Reservation.all() ||  [];
-  expect(result.length).toEqual(2);
+test("Form.all() should return an array", async () =>{
+  const result = await Form.all() ||  [];
+  expect(result.length).toEqual(1);
 });

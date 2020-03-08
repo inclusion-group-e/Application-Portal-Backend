@@ -2,16 +2,10 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.bulkInsert('Reservations', [
+    return queryInterface.bulkInsert('Form', [
       {
-        name: 'John Cena',
-        slot: new Date('21 Feb 2020 17:00:00 GMT-0500'),
-        createdAt: new Date(),
-        updatedAt: new Date()
-      },
-      {
-        name: 'Not John Cena',
-        slot: new Date('21 Feb 2020 18:30:00 GMT-0500'),
+        title: 'Inclusion Winter 2020',
+        question1: "Why do you want to be in Inclusion?",
         createdAt: new Date(),
         updatedAt: new Date()
       }
@@ -19,6 +13,6 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.bulkDelete('Reservations', null, {});
+    return queryInterface.bulkDelete('Form', null, {});
   }
 };
