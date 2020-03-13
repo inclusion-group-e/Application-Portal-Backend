@@ -14,8 +14,16 @@ module.exports = (sequelize, DataTypes) => {
       return await this.findOne({ where: {id: id} });
     }
 
-    static async create(data){
-      return await this.create({ title: data.title, question1: data.question1 });
+    static async new(form){
+      return await this.create({
+        title: form.title,
+        question1: form.question1
+      });
+    }
+
+    static async delete(id){
+      const form = await this.findOne({ where: {id: id} });
+      return await form.destroy();
     }
   }
 
